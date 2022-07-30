@@ -1,11 +1,13 @@
-create database if not exists revisao;
+drop database if exists revisao;
+
+create database revisao;
 
 use revisao;
 
 create table Clientes(
   IDCliente int not null auto_increment primary key,
   NomeCliente varchar(50) not null,
-  CPFCliente int not null
+  CPFCliente bigint not null
 );
 
 create table Vendas(
