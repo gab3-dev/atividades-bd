@@ -26,7 +26,7 @@ create table Produtos(
 create table ItensVendidos(
   IDVenda int not null,
   IDProduto int not null,
-  QtdeVendida int not null
+  QtdeVendida int not null,
   foreign key (IDVenda) references Vendas(IDVenda),
   foreign key (IDProduto) references Produtos(IDProduto)
 );
