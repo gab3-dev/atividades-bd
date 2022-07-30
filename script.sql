@@ -15,7 +15,7 @@ create table Vendas(
   foreign key (IDCliente) references Clientes(IDCliente)
 );
 
-create table Produto(
+create table Produtos(
   IDProduto int not null auto_increment primary key,
   NomeProduto varchar(50) not null,
   PrecoUnitario double not null
@@ -25,4 +25,6 @@ create table ItensVendidos(
   IDVenda int not null,
   IDProduto int not null,
   QtdeVendida int not null
+  foreign key (IDVenda) references Vendas(IDVenda),
+  foreign key (IDProduto) references Produtos(IDProduto)
 );
