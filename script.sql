@@ -7,7 +7,7 @@ use revisao;
 create table Clientes(
   IDCliente int not null auto_increment primary key,
   NomeCliente varchar(50) not null,
-  CPFCliente bigint not null
+  CPFCliente varchar(14) not null
 );
 
 create table Vendas(
